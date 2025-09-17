@@ -207,87 +207,56 @@
             margin-bottom: 40px;
         }
         
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
+        .cv-section {
+            margin-bottom: 50px;
         }
         
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: var(--primary-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
+        .cv-section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
         }
         
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
+        .cv-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border: 4px solid var(--primary-color);
-            border-radius: 50%;
-            top: 15px;
-            right: -13px;
-            z-index: 1;
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
         
-        .left {
-            left: 0;
+        .cv-item-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
         }
         
-        .right {
-            left: 50%;
+        .cv-item-date {
+            color: #666;
+            font-style: italic;
         }
         
-        .left::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            right: 30px;
-            border: medium solid white;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
+        .cv-item-institution {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #444;
         }
         
-        .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            left: 30px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
+        .cv-item-details {
+            margin-top: 10px;
         }
         
-        .right::after {
-            left: -13px;
-        }
-        
-        .timeline-content {
-            padding: 20px;
-            background-color: white;
-            position: relative;
-            border-radius: 6px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .cv-item-details p {
+            margin-bottom: 8px;
         }
         
         /* Research Page */
@@ -545,67 +514,75 @@
             <h2 class="section-title">Curriculum Vitae</h2>
             
             <div class="cv-download">
-                <a href="https://drive.google.com/file/d/18z3q_t-Yb6Wwg3jpSqc2UN-60SQxNLOD/view?usp=sharing" class="btn"><i class="fas fa-download"></i> My CV (PDF)</a>
+                <a href="https://drive.google.com/file/d/18z3q_t-Yb6Wwg3jpSqc2UN-60SQxNLOD/view?usp=sharing" class="btn"><i class="fas fa-download"></i> Download Full CV (PDF)</a>
             </div>
             
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Education</h3>
-                        <div class="timeline-event">
-                            <h4>PhD in Mathematics</h4>
-                            <p class="date">2025/11 - 2029/10</p>
-                            <p>HKU, Hong Kong, SAR</p>
-                            <p>Thesis: [Your Thesis Title]</p>
-                            <p>Advisor: Prof. Yunwen Lei</p>
-                        </div>
-                        
-                        
-                        <div class="timeline-event">
-                            <h4>BSc in Mathematics</h4>
-                            <p class="date">2021/08 - 2025/07</p>
-                            <p>NUS, Singapore</p>
-                        </div>
+            <!-- Education Section -->
+            <div class="cv-section">
+                <h3 class="cv-section-title">Education</h3>
+                
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div class="cv-item-title">Doctor of Philosophy in Mathematics</div>
+                        <div class="cv-item-date">2025-11 - now</div>
+                    </div>
+                    <div class="cv-item-institution">The University of Hong Kong, Hong Kong SAR, China</div>
+                    <div class="cv-item-details">
+                        <p><strong>Advisor:</strong> Prof. Yunwen Lei</p>
                     </div>
                 </div>
                 
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>Academic Positions</h3>
-                        <div class="timeline-event">
-                            <h4>[Your Current Position]</h4>
-                            <p class="date">[Year] - Present</p>
-                            <p>[University/Institution Name], [Location]</p>
-                            <p>[Description of responsibilities]</p>
-                        </div>
-                        
-                        <div class="timeline-event">
-                            <h4>[Previous Position]</h4>
-                            <p class="date">[Year] - [Year]</p>
-                            <p>[University/Institution Name], [Location]</p>
-                            <p>[Description of responsibilities]</p>
-                        </div>
+                
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div class="cv-item-title">Bachelor of Science in Mathematics</div>
+                        <div class="cv-item-date">2021/08 - 2025/07</div>
+                    </div>
+                    <div class="cv-item-institution">National University of Singapore, Singapore</div>
+                    <div class="cv-item-details">
+                        <p><strong>GPA:</strong> 4.66/5</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Awards Section -->
+            <div class="cv-section">
+                <h3 class="cv-section-title">Awards & Honors</h3>
+                
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div class="cv-item-title">Dean's List</div>
+                        <div class="cv-item-date">2024/01</div>
+                    </div>
+                    <div class="cv-item-institution">NUS</div>
+                    <div class="cv-item-details">
+                        <p>Achieve top 5% of GPA within the cohort in the preceding semester.</p>
                     </div>
                 </div>
                 
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Research Experience</h3>
-                        <div class="timeline-event">
-                            <h4>[Research Project Name]</h4>
-                            <p class="date">[Year] - [Year]</p>
-                            <p>[Role in the project]</p>
-                            <p>[Brief description]</p>
-                        </div>
-                        
-                        <div class="timeline-event">
-                            <h4>[Research Project Name]</h4>
-                            <p class="date">[Year] - [Year]</p>
-                            <p>[Role in the project]</p>
-                            <p>[Brief description]</p>
-                        </div>
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div class="cv-item-title">Science and Technology Merit Scholarship</div>
+                        <div class="cv-item-date">2021/08-2025/07</div>
+                    </div>
+                    <div class="cv-item-institution">NUS</div>
+                    <div class="cv-item-details">
+                        <p>Undergraduate scholarship awarded upon admission out of academic merit. Full subsidy of tuition fee and additional living allowance.</p>
                     </div>
                 </div>
+                
+                <div class="cv-item">
+                    <div class="cv-item-header">
+                        <div class="cv-item-title">SM1 Scholarship</div>
+                        <div class="cv-item-date">2016/08-2020/12</div>
+                    </div>
+                    <div class="cv-item-institution">MOE, Singapore</div>
+                    <div class="cv-item-details">
+                        <p>Scholarship awarded out of academic merit to support pre-university study. Full subsidy of tuition fee and additional living allowance.</p>
+                    </div>
+                </div>
+                
+
             </div>
         </div>
     </section>
